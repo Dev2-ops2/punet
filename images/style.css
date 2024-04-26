@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    padding: 16px;
+    background-color: rgb(204, 228, 235);
+}
+
+.container {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+nav img {
+    /* Per foton personale si rreth le 3 rreshtat posht,
+    nese dua logon e uniel, qe eshte drejtekendeshe,
+    i komentoj 3 rreshtat posht */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.panel {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgreen;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+}
+
+input {
+    flex-grow: 1;
+    padding: 16px;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+
+
+
+.empty-list-message {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 16px 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.to-do-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 16px 0;
+    border-radius: 16px;
+}
+
+.to-do-check {
+    background-color: yellow;
+    padding: 16px;
+    border-radius: 16px 0 0 16px;
+    cursor: pointer;
+}
+
+.to-do-text {
+    padding: 16px;
+    font-size: 16px;
+}
