@@ -46,5 +46,6 @@ function showContent() {
 //vazhdo
 //add1
 //add2
-//nga konflict1
+//fshim account dhe shtojme conflict2
 //conflict1
+//etc..
