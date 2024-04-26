@@ -4,49 +4,53 @@
 const button = document.querySelector('button');
 const inputField = document.querySelector('input');
 const emptyListMessage = document.querySelector('.empty-list-message');
-const todoList = document.querySelector('.to-do-list');
+const todoList = document.querySelector('ul');
+// const footer = document.querySelector('footer');
 
 // Pergatis listen me aktivitete 
-let activities = ['HTML', 'CSS', 'JS'];
+let activities = [];
+let emer = 'Erioni';
 
-showContent();
+showContent()
 
-// Funksioni qe vendos cfar do tregojm ne faqe
+//VEPRIME DINAMIKE
+button.addEventListener('click', function () {
+  newActivity = inputField.value.trim();
+  if (newActivity.length > 0) {
+    activities.push(newActivity);
+    inputField.value = '';
+    showContent();
+    console.log(activities);
+  }
+})
+
+
 function showContent() {
-  // Pastroj cdo gje
   emptyListMessage.innerText = '';
   todoList.innerText = '';
 
   if (activities.length > 0) {
-    // Shfaq aktivitetet
-
-    //   activities.forEach((activity, index) =>
-    //     todoList.innerHTML += `  <li class="to-do-item">
-    //     <div class="to-do-check">
-    //         <img src="images/check.svg" alt="Check Icon">
-    //     </div>
-    //     <p class="to-do-text">${activity}</p>
-    // </li>`
-    //   )
+    //shfaq aktivitete
     for (let i = 0; i < activities.length; i++) {
       todoList.innerHTML += `
-        <li class="to-do-item">
-          <div class="to-do-check">
-              <img src="images/check.svg" alt="Check Icon">
-          </div>
-          <p class="to-do-text">${activities[i]}</p>
-      </li>`;
+      <li class="to-do-item">
+        <div class="to-do-check">
+          <img src="images/check.svg" alt="Check Icon">
+        </div>
+        <p class="to-do-text">${activities[i]}</p>
+      </li>
+      `;
     }
-  }
-  else {
-    // Shfaq mesazhin ska aktivitete
-    emptyListMessage.innerText = "Nuk ka aktivitete";
+  } else {
+    emptyListMessage.innerText = 'Nuk ka asnje aktivitet';
   }
 }
-//vazhdo
-//add1
-//add2
-//fshim account dhe shtojme conflict2
-//conflict1
-//etc..
-//mbas rebase
+
+// let footerShtes = ` <div class="shtes">
+// <h1>Jam ${emer}</h1>
+// <p>Lorem, ipsum dolor.</p>
+// <img src="images/add.svg" alt="Add">
+// </div>`;
+
+// footer.innerHTML = footerShtes;
+
