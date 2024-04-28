@@ -39,9 +39,17 @@ function showContent() {
       </li>
       `;
     }
-
-    const checks = document.querySelectorAll('to-do-check');
-
+    console.log(activities);
+    const checks = document.querySelectorAll('.to-do-check');
+    console.log(checks)
+    for (let i = 0; i < checks.length; i++) {
+      checks[i].addEventListener('click', function () {
+        console.log(`u klikua check me index ${i}`)
+        activities.splice(i, 1);
+        showContent();
+        console.log(activities);
+      })
+    }
 
 
 
