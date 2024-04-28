@@ -9,8 +9,6 @@ const todoList = document.querySelector('ul');
 
 // Pergatis listen me aktivitete 
 let activities = [];
-let emer = 'Erioni';
-
 showContent()
 
 //VEPRIME DINAMIKE
@@ -20,7 +18,7 @@ button.addEventListener('click', function () {
     activities.push(newActivity);
     inputField.value = '';
     showContent();
-    console.log(activities);
+    // console.log('activities::', activities);
   }
 })
 
@@ -41,6 +39,12 @@ function showContent() {
       </li>
       `;
     }
+
+    const checks = document.querySelectorAll('to-do-check');
+
+
+
+
   } else {
     emptyListMessage.innerText = 'Nuk ka asnje aktivitet';
   }
