@@ -8,23 +8,21 @@ showContent();
 
 inputText.addEventListener('keypress', function (event) {
   if (event.key === 'Enter') {
-    let newActivity = inputText.value.trim();
-    if (newActivity.length > 0) {
-      punet.push(newActivity);
-      showContent();
-      inputText.value = '';
-    }
+    shtoAktivitet();
   }
 })
 button.addEventListener('click', function () {
+  shtoAktivitet();
+})
+
+function shtoAktivitet() {
   let newActivity = inputText.value.trim();
   if (newActivity.length > 0) {
     punet.push(newActivity);
     showContent();
     inputText.value = '';
   }
-
-})
+}
 
 function showContent() {
   toDoList.innerText = '';
