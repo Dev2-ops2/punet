@@ -8,10 +8,11 @@ let punet = [];
 showContent();
 
 fshijTeGjitha.addEventListener('click', function () {
-  console.log('u klikua fshij te gjitha');
-  punet = [];
-  showContent();
-  inputText.focus();
+  if (confirm('Je i sigurt qe do ti \nfshish te gjitha aktivitetet?') === true) {
+    punet = [];
+    showContent();
+    inputText.focus();
+  }
 })
 
 inputText.addEventListener('keypress', function (event) {
