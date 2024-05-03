@@ -2,9 +2,17 @@ const button = document.querySelector('button');
 const inputText = document.querySelector('input');
 const toDoList = document.querySelector('ul');
 const tekstSkaPune = document.querySelector('.empty-list-message');
+const fshijTeGjitha = document.querySelector('.fshij-te-gjitha');
 
 let punet = [];
 showContent();
+
+fshijTeGjitha.addEventListener('click', function () {
+  console.log('u klikua fshij te gjitha');
+  punet = [];
+  showContent();
+  inputText.focus();
+})
 
 inputText.addEventListener('keypress', function (event) {
   if (event.key === 'Enter') {
