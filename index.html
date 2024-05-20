@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Fonti -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Erion Activities</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <nav class="panel">
-            <h1>Aktivitete</h1>
-            <img src="images/erion.jpg" alt="">
-        </nav>
+      <nav class="panel">
+        <h1>Aktivitete</h1>
+        <img src="images/erion.jpg" alt="" />
+      </nav>
 
-        <main>
-            <p class="empty-list-message"></p>
+      <main>
+        <p class="empty-list-message"></p>
 
-
-            <ul class="to-do-list">
-                <li class="to-do-item">
-                    <div class="to-do-check">
-                        <img src="images/check.svg" alt="Check Icon">
-                    </div>
-                    <p class="to-do-text">Lorem ipsum dolor sit amet.</p>
-                </li>
-            </ul>
-        </main>
-        <footer>
-            <div class="panel">
-                <input type="text" placeholder="Shto aktivitet" autofocus>
-                <button>
-                    <img src="images/add.svg" alt="Add">
-                </button>
-                <span class="fshij-te-gjitha">Fshij te gjitha</span>
+        <ul class="to-do-list">
+          <li class="to-do-item">
+            <div class="to-do-check">
+              <img src="images/check.svg" alt="Check Icon" />
             </div>
-
-        </footer>
+            <p class="to-do-text">Lorem ipsum dolor sit amet.</p>
+          </li>
+        </ul>
+      </main>
+      <footer>
+        <div class="panel">
+          <input type="text" placeholder="Shto aktivitet" autofocus />
+          <button>
+            <img src="images/add.svg" alt="Add" />
+          </button>
+          <span class="fshij-te-gjitha"><i class="fa-solid fa-trash"></i></span>
+        </div>
+      </footer>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
-</body>
-
+  </body>
 </html>
