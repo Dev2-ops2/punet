@@ -5,18 +5,31 @@ const tekstSkaPune = document.querySelector('.empty-list-message');
 const fshijTeGjitha = document.querySelector('.fshij-te-gjitha');
 
 let punet = [];
+
+storage = localStorage.getItem('punet');
+
+if(storage){
+  punet = JSON.parse(storage);
+}
+
 showContent();
 
 fshijTeGjitha.addEventListener('click', function () {
-  if (confirm('Je i sigurt qe do ti \nfshish te gjitha aktivitetet?') === true) {
-    punet = [];
-    showContent();
-    inputText.focus();
+  if(punet.length==0){
+    alert('Nuk ka aktivitete per te fshir');
+  }
+  else{
+    if (confirm('Je i sigurt qe do ti \nfshish te gjitha aktivitetet?') === true) {
+      punet = [];
+      localStorage.setItem('punet', JSON.stringify(punet));
+      showContent();
+      inputText.focus();
+    }
   }
 })
 
 inputText.addEventListener('keypress', function (event) {
-  if (event.key === 'Enter') {
+  if (event.key === 'Enter') {  
     shtoAktivitet();
   }
 })
@@ -28,6 +41,7 @@ function shtoAktivitet() {
   let newActivity = inputText.value.trim();
   if (newActivity.length > 0) {
     punet.push(newActivity);
+    localStorage.setItem('punet', JSON.stringify(punet));
     showContent();
     inputText.value = '';
   }
@@ -51,6 +65,7 @@ function showContent() {
     for (let i = 0; i < checks.length; i++) {
       checks[i].addEventListener('click', function () {
         punet.splice(i, 1);
+        localStorage.setItem('punet', JSON.stringify(punet));
         showContent();
       })
     }
